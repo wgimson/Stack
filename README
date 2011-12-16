@@ -1,0 +1,18 @@
+____________________________________README_____________________________________
+stack.c prompts a user to enter a series of parenthesis and/of curly braces,
+and then checks to see whether they are properly nested, i.e. whether each
+parethesis/curly brace has a matching and oppositely aligned parenthesis/curly
+brace. This is achieved through an implementation of the stack data structure,
+with functions push(), pop(), is_empty(), is_full(), stack_overfow(), 
+stack_underflow(), check_illegal_chars(), match_pairs() and load_stack(). The 
+user is prompted to enter a series of parenthesis, curly braces, and these are
+put on the stack with function load_stack() until either a newline character or
+a right parenthesis/curly brace is encountered. Function match_pairs() reads 
+the remainder of the characters and pops a character of the stack for each 
+remaining character read. If any of these don't match, match pairs returns a 
+bool of value 'false', the program informs the user that the input was improperly
+matched, and the program terminates. Otherwise, match_pairs() returns 'true', 
+and the program reports a matched input and terminates. push(), pop(), is_empty(),
+is_full(), stack_overflow(), stack_underflow() and check_illegal_chars() are 
+helper functions which aid in determining if error messages need be printed and
+/or execution terminated.
